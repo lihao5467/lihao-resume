@@ -15,12 +15,14 @@ defineProps({
   endDate: {
     type: String,
   },
+  experienceDescText: {
+    type: Array,
+    required: true,
+  },
+  coreTechnology: {
+    type: String,
+  },
 });
-const experienceDescText = reactive([
-  "参与需求讨论, 指定开发计划, 制定项目和开发规范, 参与需求讨论,",
-  "参与需求讨论, 指定开发计划, 制定项目和开发规范",
-  "参与需求讨论, 指定开发计划, 制定项目和开发规范",
-]);
 </script>
 
 <template>
@@ -31,6 +33,9 @@ const experienceDescText = reactive([
         <Local />
         <span class="location-name ml-8">{{ location }}</span>
       </div>
+    </div>
+    <div class="core-technology mb-10" v-if="coreTechnology">
+      {{ coreTechnology }}
     </div>
     <section class="experience-desc">
       <div class="experience-desc-text">
