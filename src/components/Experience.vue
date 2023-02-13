@@ -52,7 +52,6 @@ const experienceDescText = reactive([
 </template>
 
 <style scoped lang="less">
-@import "@/assets/globalLessVarible.less";
 .experience {
   .experience-top {
     display: flex;
