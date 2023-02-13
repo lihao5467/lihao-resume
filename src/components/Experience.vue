@@ -1,10 +1,8 @@
 <script setup>
 import { Local, Time } from "@icon-park/vue-next";
-import { reactive, ref } from "vue";
 defineProps({
   title: {
     type: String,
-    required: true,
   },
   location: {
     type: String,
@@ -22,12 +20,15 @@ defineProps({
   coreTechnology: {
     type: String,
   },
+  jobContent: {
+    type: String,
+  },
 });
 </script>
 
 <template>
   <div class="experience">
-    <div class="experience-top mb-10">
+    <div class="experience-top mb-10" v-if="title">
       <p class="title">{{ title }}</p>
       <div class="location" v-if="location">
         <Local />
@@ -37,6 +38,9 @@ defineProps({
     <div class="core-technology mb-10" v-if="coreTechnology">
       {{ coreTechnology }}
     </div>
+    <div class="job-content mb-10" v-if="jobContent">
+      {{ jobContent }}
+    </div>
     <section class="experience-desc">
       <div class="experience-desc-text">
         <div
@@ -45,7 +49,7 @@ defineProps({
           v-for="(item, index) in experienceDescText"
           :key="item"
         >
-          {{ item }}
+          · {{ item }}
         </div>
       </div>
       <div class="experience-desc-date" v-if="startDate && endDate">
