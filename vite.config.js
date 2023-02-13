@@ -12,5 +12,15 @@ export default defineConfig({
       },
     ],
   },
+  css: {
+    preprocessorOptions: {
+      less: {
+        additionalData: `@import "${resolve(
+          __dirname,
+          "src/assets/globalLessVarible.less"
+        )}";`,
+      },
+    },
+  },
   server: { hmr: true },
 });

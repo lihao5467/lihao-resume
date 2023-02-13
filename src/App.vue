@@ -98,8 +98,6 @@ const HZAQMSProjectExperienceDescText = [
 </template>
 
 <style lang="less">
-@import "@/assets/globalLessVarible.less";
-
 .resume {
   width: 1024px;
   min-height: 1440px;

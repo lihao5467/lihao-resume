@@ -21,7 +21,6 @@ defineProps({
 </template>
 
 <style scoped lang="less">
-@import "@/assets/globalLessVarible.less";
 .module {
   margin-top: 20px;
   .module-top {
