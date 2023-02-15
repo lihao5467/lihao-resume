@@ -4,7 +4,7 @@ import Module from "./components/Module.vue";
 import Experience from "./components/Experience.vue";
 import { reactive, ref } from "vue";
 const personInfo = reactive([
-  ["19112624873", "2315590235@qq.com"],
+  ["19112624873", "hao202417@gmail.com"],
   ["22岁", "男"],
   ["专科", "软件技术"],
 ]);
@@ -12,8 +12,8 @@ const technologyStack = reactive([
   "熟练使用 HTML, CSS, JavaScript构建基础web应用。",
   "熟练掌握 Vue.js以及 VueRouter, Vuex, Pinia官方生态库。",
   "熟练使用 Element, AntDesign, Echarts常用组件库和图表库搭建应用页面。",
-  "对前端css预处理语言 Less, sass有过实际开发使用。",
   "对Uniapp开发跨端应用程序,微信小程序开发有过了解与实践。",
+  "对前端css预处理语言 Less, sass有过实际开发使用。",
   "熟悉pnpm, npm, yarn常用包管理工具的使用以及常见命令。",
   "了解前端工程化, 对Webpack, Vite前端构建工具有过项目输出。",
   "熟悉git版本控制工具的使用, 掌握常见命令和多人协作开发流程。",
@@ -25,6 +25,9 @@ const HZWorkExperienceDescText = [
 const BRWorkExperienceDescText = [
   "维护公司已有项目, 开发新功能。快速完成上级分配的任务并且缩短项目交付周期。",
 ];
+// 项目 一
+const HZOACoreTechnology =
+  "主要技术栈: Vue2 + Element + Webpack + VariantForm + Less";
 const HZOAProjectExperienceDescText = [
   "完成系统菜单权限管理, 实现多级菜单匹配, 使用递归代替循环匹配完成多级嵌套子路由的管理。",
   "解决文件体积过大时上传缓慢, 采用文件切片极大的优化上传文件的速度。",
@@ -33,17 +36,23 @@ const HZOAProjectExperienceDescText = [
   "封装常用的公共组件, 公共请求逻辑以及请求报错处理, 优化无意义的重复代码提高开发效率。",
   "优化前端代码和静态资源体积, 对JSBundle进行分包优化减少构建后的应用大小, 提高页面加载速度。",
 ];
-const HZOACoreTechnology =
-  "主要技术栈: Vue2 + Element + Webpack + VariantForm + Less";
 
-const HZAFZXProjectExperienceDescText = [
-  "从0-1搭建项目前期结构, 引入Eslint, Prettier指定前端开发基本规范。",
-  "采用css scale方案解决大屏适配。",
-  "使用单点登陆机制, 让用户在多系统之间切换时无需重新登陆该系统。",
-  "封装常用的公共组件, 公共请求逻辑以及请求报错处理, 优化无意义的重复代码提高开发效率。",
-];
+// 项目 二
 const HZAFZXCoreTechnology =
   "主要技术栈: Vue3 + Pinia + Vite + Echarts + Element-Plus + Sass";
+const HZAFZXProjectExperienceDescText = [
+  "从0-1搭建项目前期结构, 引入Eslint, Prettier指定前端开发基本规范。",
+  "采用css scale作为大屏适配方案, 保证页面在不同大小屏幕上的展示效果。",
+  "基于ElementPlus DatePicker组件二次封装, 复用自定义样式以及业务逻辑。",
+];
+
+// 项目 三
+const HZRepairCoreTechnology = "主要技术栈: Uniapp + Vuex + uView + Less";
+const HZRepairProjectExperienceDescText = [
+  "接入微信登陆处理登陆权限, 根据账号权限隐藏显示不同的tabbar页面以及对应的接口权限。",
+  "封装上传图片请求, 对图片过大的情况利用Canvas进行图片裁剪保证详情页正常展示。",
+  "基于ElementPlus DatePicker组件二次封装, 复用自定义样式以及业务逻辑。",
+];
 </script>
 
 <template>
@@ -74,7 +83,7 @@ const HZAFZXCoreTechnology =
           :experience-desc-text="HZWorkExperienceDescText"
         ></Experience>
         <Experience
-          class="mt-10"
+          class="mt-12"
           title="重庆市巴尔瑙尔科技有限公司"
           location="重庆"
           start-date="2021-08"
@@ -93,11 +102,18 @@ const HZAFZXCoreTechnology =
           :experience-desc-text="HZOAProjectExperienceDescText"
         ></Experience>
         <Experience
-          class="mt-10"
+          class="mt-12"
           title="安富中学大屏可视化看板"
           job-content="工作内容："
           :core-technology="HZAFZXCoreTechnology"
           :experience-desc-text="HZAFZXProjectExperienceDescText"
+        ></Experience>
+        <Experience
+          class="mt-12"
+          title="校园维修(公众号)"
+          job-content="工作内容："
+          :core-technology="HZRepairCoreTechnology"
+          :experience-desc-text="HZRepairProjectExperienceDescText"
         ></Experience>
       </Module>
     </main>
