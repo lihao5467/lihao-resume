@@ -26,29 +26,24 @@ const BRWorkExperienceDescText = [
   "维护公司已有项目, 开发新功能。快速完成上级分配的任务并且缩短项目交付周期。",
 ];
 const HZOAProjectExperienceDescText = [
-  "系统菜单权限管理, 为了实现多级菜单匹配, 使用递归代替循环匹配, 使后续可以不限层级嵌套子路由。",
-  "为解决上传大文件上传过慢, 采用文件切片上传多个小文件, 极大的优化上传速度。",
-  "可视化配置表单, 使用VariantForm通过操作JSON数据完成用户自定义表单。",
+  "完成系统菜单权限管理, 实现多级菜单匹配, 使用递归代替循环匹配完成多级嵌套子路由的管理。",
+  "解决文件体积过大时上传缓慢, 采用文件切片极大的优化上传文件的速度。",
+  "开发可视化配置表单, 使用VariantForm操作JSON数据完成用户自定义表单。",
+  "增加系统单点登陆机制, 解决用户在多个系统之间跳转需要重复登陆的问题。",
+  "封装常用的公共组件, 公共请求逻辑以及请求报错处理, 优化无意义的重复代码提高开发效率。",
   "优化前端代码和静态资源体积, 对JSBundle进行分包优化减少构建后的应用大小, 提高页面加载速度。",
 ];
 const HZOACoreTechnology =
   "主要技术栈: Vue2 + Element + Webpack + VariantForm + Less";
-const HZAQMSProjectExperienceDescText = [
-  "从0-1搭建项目前期结构, 接入Eslint, Prettier指定前端开发基本规范。 ",
-  "负责系统预警模块的开发, 利用发布订阅者模式管理整个预警和通知处理流程。",
-  "使用单点登陆机制, 让用户在多系统之间切换时无需重新登陆该系统。",
-  "封装常用的公共组件, 公共请求逻辑以及请求报错处理, 优化无意义的重复代码提高开发效率。",
-];
-const HZAQMCoreTechnology =
-  "主要技术栈: Vue3 + Pinia + Vite + VueUse + Element-Plus + Sass";
+
 const HZAFZXProjectExperienceDescText = [
-  "从0-1搭建项目前期结构, 接入Eslint, Prettier指定前端开发基本规范。 ",
-  "负责系统预警模块的开发, 利用发布订阅者模式管理整个预警和通知处理流程。",
+  "从0-1搭建项目前期结构, 引入Eslint, Prettier指定前端开发基本规范。",
+  "采用css scale方案解决大屏适配。",
   "使用单点登陆机制, 让用户在多系统之间切换时无需重新登陆该系统。",
   "封装常用的公共组件, 公共请求逻辑以及请求报错处理, 优化无意义的重复代码提高开发效率。",
 ];
 const HZAFZXCoreTechnology =
-  "主要技术栈: Vue3 + Pinia + Vite + Echarts + Element-Plus + Less";
+  "主要技术栈: Vue3 + Pinia + Vite + Echarts + Element-Plus + Sass";
 </script>
 
 <template>
@@ -96,13 +91,6 @@ const HZAFZXCoreTechnology =
           job-content="工作内容："
           :core-technology="HZOACoreTechnology"
           :experience-desc-text="HZOAProjectExperienceDescText"
-        ></Experience>
-        <Experience
-          class="mt-10"
-          title="智慧校园安全管理系统"
-          job-content="工作内容："
-          :core-technology="HZAQMCoreTechnology"
-          :experience-desc-text="HZAQMSProjectExperienceDescText"
         ></Experience>
         <Experience
           class="mt-10"
