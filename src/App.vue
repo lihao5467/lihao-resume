@@ -43,15 +43,15 @@ const HZAFZXCoreTechnology =
 const HZAFZXProjectExperienceDescText = [
   "从0-1搭建项目前期结构, 引入Eslint, Prettier指定前端开发基本规范。",
   "采用css scale作为大屏适配方案, 保证页面在不同大小屏幕上的展示效果。",
-  "基于ElementPlus DatePicker组件二次封装, 复用自定义样式以及业务逻辑。",
+  "封装使用Echarts外层容器组件, 抽取图表初始化代码和容器大小变化自动更新图表大小。",
 ];
 
 // 项目 三
 const HZRepairCoreTechnology = "主要技术栈: Uniapp + Vuex + uView + Less";
 const HZRepairProjectExperienceDescText = [
   "接入微信登陆处理登陆权限, 根据账号权限隐藏显示不同的tabbar页面以及对应的接口权限。",
-  "封装上传图片请求, 对图片过大的情况利用Canvas进行图片裁剪保证详情页正常展示。",
-  "基于ElementPlus DatePicker组件二次封装, 复用自定义样式以及业务逻辑。",
+  "封装上传图片请求, 对图片过大的情况利用Canvas进行图片裁剪保证详情页图片正常展示。",
+  "对UniRequest api进行二次封装统一添加认证信息以及请求错误处理。",
 ];
 </script>
 
