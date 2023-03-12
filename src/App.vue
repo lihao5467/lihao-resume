@@ -9,18 +9,17 @@ const personInfo = reactive([
   ["专科", "软件技术"],
 ]);
 const technologyStack = reactive([
-  "熟练使用 HTML, CSS, JavaScript构建基础web应用。",
-  "熟练掌握 Vue.js以及 VueRouter, Vuex, Pinia官方生态库。",
-  "熟练使用 Element, AntDesign, Echarts常用组件库和图表库搭建应用页面。",
-  "对Uniapp开发跨端应用程序,微信小程序开发有过了解与实践。",
-  "对前端css预处理语言 Less, sass有过实际开发使用。",
-  "熟悉pnpm, npm, yarn常用包管理工具的使用以及常见命令。",
-  "了解前端工程化, 对Webpack, Vite前端构建工具有过项目输出。",
-  "熟悉git版本控制工具的使用, 掌握常见命令和多人协作开发流程。",
+  "掌握前端流行框架, 具备Vue项目从0-1的开发和上线的实战经验。",
+  "深入了解Vue底层原理及设计实现, 具备框架源码阅读能力。",
+  "熟悉前端常用构建工具, 具备项目从0-1的项目工程化搭建能力。",
+  "具备大屏可视化项目经验, 对常见大屏适配方案有过实际项目实践经验。",
+  "具备小程序原生开发及uni-app跨端开发能力, 拥有实际项目经验。",
+  "熟练使用常用组件库, 具备对ElementUI, AntDesignVue二次扩展封装能力。",
+  "掌握git版本控制工具的使用, 熟悉常用命令, 具备多人协作开发能力。",
 ]);
 const HZWorkExperienceDescText = [
-  "参与项目需求讨论, 完成前端技术选型。搭建项目前期工程化",
-  "接入前端代码规范，快速完成项目开发",
+  "参与项目需求讨论, 根据项目实际需求完成前端技术选型。",
+  "搭建项目前期工程化, 接入前端代码规范, 高质量完成项目开发",
 ];
 const BRWorkExperienceDescText = [
   "维护公司已有项目, 开发新功能。快速完成上级分配的任务并且缩短项目交付周期。",
@@ -29,7 +28,7 @@ const BRWorkExperienceDescText = [
 const HZOACoreTechnology =
   "主要技术栈: Vue2 + Element + Webpack + VariantForm + Less";
 const HZOAProjectExperienceDescText = [
-  "完成系统菜单权限管理, 实现多级菜单匹配, 使用递归代替循环匹配完成多级嵌套子路由的管理。",
+  "设计并实现系统菜单权限及按钮权限管理, 通过后端存储路由信息完成菜单可配置化。",
   "解决文件体积过大时上传缓慢, 采用文件切片极大的优化上传文件的速度。",
   "开发可视化配置表单, 使用VariantForm操作JSON数据完成用户自定义表单。",
   "增加系统单点登陆机制, 解决用户在多个系统之间跳转需要重复登陆的问题。",
@@ -42,12 +41,13 @@ const HZAFZXCoreTechnology =
   "主要技术栈: Vue3 + Pinia + Vite + Echarts + Element-Plus + Sass";
 const HZAFZXProjectExperienceDescText = [
   "从0-1搭建项目前期结构, 引入Eslint, Prettier指定前端开发基本规范。",
-  "采用css scale作为大屏适配方案, 保证页面在不同大小屏幕上的展示效果。",
-  "封装使用Echarts外层容器组件, 抽取图表初始化代码和容器大小变化自动更新图表大小。",
+  "采用css scale作为大屏适配方案, 保证页面在同比例屏幕上的展示效果。",
+  "封装Echarts外层容器组件, 减少图表初始化和图表重绘等重复代码。",
 ];
 
 // 项目 三
-const HZRepairCoreTechnology = "主要技术栈: Uniapp + Vuex + uView + Less";
+const HZRepairCoreTechnology =
+  "主要技术栈: Vue2 + Vuex + ElementUI + Webpack + Less";
 const HZRepairProjectExperienceDescText = [
   "接入微信登陆处理登陆权限, 根据账号权限隐藏显示不同的tabbar页面以及对应的接口权限。",
   "封装上传图片请求, 对图片过大的情况利用Canvas进行图片裁剪保证详情页图片正常展示。",
@@ -59,13 +59,13 @@ const HZRepairProjectExperienceDescText = [
   <div class="resume">
     <div class="top-bar"></div>
     <div class="person-info">
-      <h1>李豪</h1>
+      <h1>李 豪</h1>
       <div class="info" v-for="item in personInfo" :key="item[0]">
         {{ item[0] }} | {{ item[1] }}
       </div>
     </div>
     <main>
-      <Module class="technology-stack" title="个人技术栈">
+      <Module class="technology-stack" title="个人优势">
         <template #module-icon>
           <Flashlamp theme="filled" :size="24" />
         </template>
@@ -79,7 +79,7 @@ const HZRepairProjectExperienceDescText = [
           title="重庆市荟至信息科技有限公司"
           location="重庆"
           start-date="2022-05"
-          end-date="2023-02"
+          end-date="2023-03"
           :experience-desc-text="HZWorkExperienceDescText"
         ></Experience>
         <Experience
@@ -110,7 +110,7 @@ const HZRepairProjectExperienceDescText = [
         ></Experience>
         <Experience
           class="mt-12"
-          title="校园维修(公众号)"
+          title="荟至信息综合云平台"
           job-content="工作内容："
           :core-technology="HZRepairCoreTechnology"
           :experience-desc-text="HZRepairProjectExperienceDescText"
